@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+	x:Class="PE_Mobile_APP.AppShell"
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:views="clr-namespace:PE_Mobile_APP.Views"
+	xmlns:local="clr-namespace:PE_Mobile_APP">
+
+	<ShellContent
+		Shell.NavBarIsVisible="False"
+		Title="Aanmelden"
+		Icon="iconblank.png"
+		ContentTemplate="{DataTemplate views:AanmeldenPage}"
+		Route="AanmeldenPage" />
+</Shell>
