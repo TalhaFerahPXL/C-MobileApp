@@ -17,7 +17,7 @@ public partial class Register : ContentPage
 
 
 
-        RegisterController registerController = new RegisterController();
-        registerController.RegisterUser(naam.Text, email.Text, password.Text);
+        //RegisterController registerController = new RegisterController();
+        //registerController.RegisterUser(naam.Text, email.Text, password.Text);
     }
 }

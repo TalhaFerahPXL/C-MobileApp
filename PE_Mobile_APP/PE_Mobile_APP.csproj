@@ -46,11 +46,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Images\emptyprofile.png" />
 	  <None Remove="Images\m5csbanner.jpg" />
 	  <None Remove="Images\main.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiImage Include="Images\emptyprofile.png" />
 	  <MauiImage Include="Images\m5csbanner.jpg" />
 	  <MauiImage Include="Images\main.jpg" />
 	</ItemGroup>
@@ -71,6 +73,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\Home.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Login.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

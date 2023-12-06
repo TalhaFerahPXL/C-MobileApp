@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PE_Mobile_APP.Views.Home"
+             Title="Home"
+             Shell.BackgroundColor="#242527"
+             >
+
+
+    <CollectionView x:Name="carListView">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout Padding="10">
+                    <!-- Afbeelding -->
+                    <Image Source="{Binding ImageUrl}" Aspect="AspectFill" HeightRequest="200" HorizontalOptions="FillAndExpand" />
+
+                    <!-- Titel -->
+                    <Label Text="{Binding Make}" FontSize="18" FontAttributes="Bold" />
+
+                    <!-- Prijs -->
+                    <Label Text="{Binding Price, StringFormat='Prijs: € {0:F}'}" />
+
+                    <!-- Kilometers -->
+                    <Label Text="{Binding Kilometers, StringFormat='Kilometers: {0} km'}" />
+
+                    <!-- Bouwjaar -->
+                    <Label Text="{Binding Year, StringFormat='Bouwjaar: {0}'}" />
+                </StackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+
+
+
+
+
+
+</ContentPage>

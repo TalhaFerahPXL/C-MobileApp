@@ -3,7 +3,9 @@
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 			 xmlns:vm="clr-namespace:PE_Mobile_APP.ViewModels"
 			 x:Class="PE_Mobile_APP.Views.AanmeldenPage"
-			 x:DataType="vm:AanmeldenViewModel">
+			 x:DataType="vm:AanmeldenViewModel"
+             
+             >
 
     <Grid RowDefinitions="Auto,*,Auto" ColumnDefinitions="*">
 
