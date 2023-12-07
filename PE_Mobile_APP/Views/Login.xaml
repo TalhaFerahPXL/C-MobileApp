@@ -16,10 +16,10 @@
         <Label Text="BMW ID LOGIN" FontFamily="sans-serif" FontAttributes="Bold" FontSize="28" TextColor="WhiteSmoke" HorizontalOptions="Center" Margin="0, 50"/>
 
         
-        <Entry Placeholder="Email" Margin="20"/>
+        <Entry Placeholder="Email" Margin="20" x:Name="email"/>
 
         
-        <Entry Placeholder="Password" IsPassword="True" Margin="20"/>
+        <Entry Placeholder="Password" IsPassword="True" Margin="20" x:Name="wachtwoord"/>
 
         <Label Text="testt" FontFamily="sans-serif" FontSize="18" TextColor="WhiteSmoke" IsVisible="false"></Label>
         

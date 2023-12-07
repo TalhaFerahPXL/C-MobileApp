@@ -11,20 +11,22 @@
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <StackLayout Padding="10">
-                    <!-- Afbeelding -->
+                    
                     <Image Source="{Binding ImageUrl}" Aspect="AspectFill" HeightRequest="200" HorizontalOptions="FillAndExpand" />
 
-                    <!-- Titel -->
+                    
                     <Label Text="{Binding Make}" FontSize="18" FontAttributes="Bold" />
 
-                    <!-- Prijs -->
+                    
                     <Label Text="{Binding Price, StringFormat='Prijs: € {0:F}'}" />
 
-                    <!-- Kilometers -->
+                    
                     <Label Text="{Binding Kilometers, StringFormat='Kilometers: {0} km'}" />
 
-                    <!-- Bouwjaar -->
+                    
                     <Label Text="{Binding Year, StringFormat='Bouwjaar: {0}'}" />
+
+                    <Button Text="Details" Clicked="OnDetailsClicked" CommandParameter="{Binding .}" />
                 </StackLayout>
             </DataTemplate>
         </CollectionView.ItemTemplate>
