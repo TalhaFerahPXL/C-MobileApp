@@ -1,30 +1,70 @@
+using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using PE_Mobile_APP.Model;
+using System.Reflection;
 
 namespace PE_Mobile_APP.Views;
 
 public partial class Home : ContentPage
 {
-	public Home()
+    private const string ApiBaseUrl = "http://10.0.2.2:5084/Home/GetAutos"; // Vervang dit met de juiste URL van jouw API
+
+    public Home()
 	{
 		InitializeComponent();
+        LoadCarsAsync();
 
+        string naam = Preferences.Get("GebruikersNaam", "User");
 
-        List<Car> cars = new List<Car>
+        AppShell shell = (AppShell)Application.Current.MainPage;
+        var flyoutHeader = (StackLayout)shell.FlyoutHeader;
+        var label = flyoutHeader.Children.FirstOrDefault(c => c is Label) as Label;
+
+        if (label != null)
         {
-            new Car { Make = "Mercedes-Benz", Kilometers = "2000", Year = 2022, ImageUrl = "m5csbanner.jpg", Price = "1000", Description = "M5cs .. M5cs .. M5cs ..M5cs ..M5cs ..M5cs .." },
-                     new Car { Make = "Mercedes-Benz", Kilometers = "2000", Year = 2022, ImageUrl = "m5csbanner.jpg", Price = "1000", Description = "M5cs .. M5cs .. M5cs ..M5cs ..M5cs ..M5cs .." },
-
-            //new Car { Make = "BMW", Model = "3 Series", Year = 2021, ImageUrl = "car2.jpg" },
-            
-        };
-
-        carListView.ItemsSource = cars;
-
-
-       
+            label.Text = $"Hallo {naam}!";
+        }
 
     }
 
+
+    private async Task<List<Car>> GetCarsAsync()
+    {
+        List<Car> cars = new List<Car>();
+
+        try
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                HttpResponseMessage response = await client.GetAsync($"{ApiBaseUrl}"); // Vervang "/cars" met het juiste eindpunt van jouw API
+
+                if (response.IsSuccessStatusCode)
+                {
+                    string carsJson = await response.Content.ReadAsStringAsync();
+                    cars = JsonConvert.DeserializeObject<List<Car>>(carsJson);
+                }
+                else
+                {
+                    // Behandel eventuele fouten bij het ophalen van gegevens
+                    Console.WriteLine("Fout bij het ophalen van auto's. Statuscode: " + response.StatusCode);
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            // Behandel eventuele uitzonderingen
+            Console.WriteLine("Er is een fout opgetreden: " + ex.Message);
+        }
+
+        return cars;
+    }
+
+    private async void LoadCarsAsync()
+    {
+        List<Car> cars = await GetCarsAsync(); // Roep de GetCarsAsync-methode aan om de auto-objecten op te halen
+
+        carListView.ItemsSource = cars; // Wijs de lijst met auto-objecten toe aan de ItemsSource van carListView
+    }
 
     private async void OnDetailsClicked(object sender, EventArgs e)
     {
@@ -33,6 +73,11 @@ public partial class Home : ContentPage
             await Navigation.PushAsync(new CarDetails(selectedCar));
         }
     }
-
-
 }
+
+
+
+
+
+
+

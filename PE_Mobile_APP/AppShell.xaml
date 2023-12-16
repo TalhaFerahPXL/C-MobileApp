@@ -13,7 +13,7 @@
            
            <Image Source="emptyprofile.png" MaximumHeightRequest="150"/>
 
-            <Label Text="Hallo Talha!" Margin="20" FontFamily="sans-serif" FontSize="20" FontAttributes="Bold" />
+            <Label x:Name="userNameTxt" Text="{Binding userName}" Margin="20" FontFamily="sans-serif" FontSize="20" FontAttributes="Bold" />
         </StackLayout>
     </Shell.FlyoutHeader>
 

@@ -49,5 +49,50 @@ namespace AppApi.Controllers
                 return StatusCode(500, "Er is een fout opgetreden: " + ex.Message);
             }
         }
+
+
+
+        //Vind de naam van de user via email tijdens login
+
+        [HttpGet("GetUserNameByEmail")]
+        public IActionResult GetUserNameByEmail(string email)
+        {
+            if (string.IsNullOrEmpty(email))
+            {
+                return BadRequest("Ongeldig e-mailadres");
+            }
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string query = "SELECT Naam FROM Users WHERE Email = @Email";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Email", email);
+
+                        string userName = (string)command.ExecuteScalar();
+
+                        if (!string.IsNullOrEmpty(userName))
+                        {
+                            return Ok(userName);
+                        }
+                        else
+                        {
+                            return NotFound("Gebruiker niet gevonden voor dit e-mailadres.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Er is een fout opgetreden: " + ex.Message);
+            }
+        }
     }
+
+    
 }

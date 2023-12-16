@@ -47,12 +47,14 @@
 
 	<ItemGroup>
 	  <None Remove="Images\emptyprofile.png" />
+	  <None Remove="Images\m3comp.jpg" />
 	  <None Remove="Images\m5csbanner.jpg" />
 	  <None Remove="Images\main.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <MauiImage Include="Images\emptyprofile.png" />
+	  <MauiImage Include="Images\m3comp.jpg" />
 	  <MauiImage Include="Images\m5csbanner.jpg" />
 	  <MauiImage Include="Images\main.jpg" />
 	</ItemGroup>
@@ -60,9 +62,12 @@
 	<ItemGroup>
 	  <PackageReference Include="CommunityToolkit.Maui" Version="5.3.0" />
 	  <PackageReference Include="CommunityToolkit.MVVM" Version="8.2.1" />
+	  <PackageReference Include="EntityFramework" Version="6.4.4" />
 	  <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.3.0" />
 	  <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.3.0" />
 	  <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.2" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.14" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.14" />
 	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	</ItemGroup>
 

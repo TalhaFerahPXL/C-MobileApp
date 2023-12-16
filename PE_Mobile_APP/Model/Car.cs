@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace PE_Mobile_APP.Model
 {
+    [Table("Autos")]
     public class Car
     {
         public string Make { get; set; }

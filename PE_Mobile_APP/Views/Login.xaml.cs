@@ -28,16 +28,31 @@ public partial class Login : ContentPage
 
         HttpResponseMessage response = await client.PostAsync("http://10.0.2.2:5084/api/Login/LoginUser", content);
 
+
+        //HttpResponseMessage responseMessage = await client.GetAsync("http://10.0.2.2:5084/api/Login/GetUserNameByEmail");
+        HttpResponseMessage responseMessage = await client.GetAsync($"http://10.0.2.2:5084/api/Login/GetUserNameByEmail?email={Email}");
+
+
+        //als response == 200 => succes
         if (response.IsSuccessStatusCode)
         {
-            // Inloggen succesvol
+            
+            string naam = await responseMessage.Content.ReadAsStringAsync();
+
+            Preferences.Set("GebruikersNaam", naam);
+            
+            
+
+
+
+
             await Shell.Current.GoToAsync("//Home");
         }
         else
         {
             // Onjuiste inloggegevens
         }
-
+        
 
 
         
