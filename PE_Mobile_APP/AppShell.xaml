@@ -4,7 +4,9 @@
 	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 	xmlns:views="clr-namespace:PE_Mobile_APP.Views"
-	xmlns:local="clr-namespace:PE_Mobile_APP.Views">
+	xmlns:local="clr-namespace:PE_Mobile_APP.Views"
+    
+    >
 
 
     <Shell.FlyoutHeader>
@@ -19,20 +21,25 @@
 
     <ShellContent Shell.NavBarIsVisible="False" Title="Aanmelden" ContentTemplate="{DataTemplate views:AanmeldenPage}" Route="AanmeldenPage" Shell.FlyoutItemIsVisible="False"/>
     <ShellContent Title="Home" ContentTemplate="{DataTemplate views:Home}" Route="Home"/>
+    <ShellContent Title="verkopen" ContentTemplate="{DataTemplate views:VerkoopPage}" Route="VerkoopPage"/>
+    
+    
     
 
 
     <FlyoutItem Title="">
-    
-    
-    <Tab>
+
+
+        <Tab>
         
     </Tab>
 </FlyoutItem>
 
 
 
-    
+
+
+
 
 
 </Shell>

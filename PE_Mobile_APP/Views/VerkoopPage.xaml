@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PE_Mobile_APP.Views.VerkoopPage"
+             Title="VerkoopPage">
+
+    <StackLayout Padding="20">
+        <Entry Placeholder="Merk" Text="{Binding Make}" />
+        <Entry Placeholder="Prijs" Text="{Binding Price}" />
+        <Entry Placeholder="Bouwjaar" Text="{Binding Year}" />
+        <Entry Placeholder="Kilometers" Text="{Binding Kilometers}" />
+        <Entry Placeholder="Beschrijving" Text="{Binding Description}" />
+
+
+        <Button Text="Foto uploaden" Clicked="OnUploadPhotoClicked" />
+
+
+        <Button Text="Opslaan" Clicked="OnSaveClicked" />
+
+        <Image Source="/data/user/0/com.companyname.PE_Mobile_APP/files/Images/chrome_screenshot_1703002756176.png" />
+
+    </StackLayout>
+
+</ContentPage>
