@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PE_Mobile_APP.Views.VerkoopPage"
-             Title="VerkoopPage">
+             Title="VerkoopPage"
+             Shell.BackgroundColor="#242527"
+             >
 
     <StackLayout Padding="20">
         <Entry Placeholder="Merk" Text="{Binding Make}" />
@@ -12,12 +14,18 @@
         <Entry Placeholder="Beschrijving" Text="{Binding Description}" />
 
 
-        <Button Text="Foto uploaden" Clicked="OnUploadPhotoClicked" />
+        <Button Text="Foto uploaden" Clicked="OnUploadPhotoClicked" BackgroundColor="#242527" TextColor="WhiteSmoke" Margin="0, 20"/>
+
+        <Label Text="Preview Image" TextColor="#242527" Margin="20"></Label>
+        
+        <Image x:Name="PreviewImage" Source="{Binding ImageUrl}" Margin="20"/>
+        
+        
+        <Button Text="Opslaan" Clicked="OnSaveClicked" BackgroundColor="#242527" TextColor="WhiteSmoke" Margin="0, 20"/>
+
+        
 
 
-        <Button Text="Opslaan" Clicked="OnSaveClicked" />
-
-        <Image Source="/data/user/0/com.companyname.PE_Mobile_APP/files/Images/chrome_screenshot_1703002756176.png" />
 
     </StackLayout>
 

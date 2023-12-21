@@ -26,17 +26,30 @@ public partial class VerkoopPage : ContentPage
 
             if (result != null)
             {
-                var imageName = Path.GetFileName(result.FullPath);
-                var projectImagesPath = Path.Combine(Environment.CurrentDirectory, "Images"); // Het pad binnen je Visual Studio-project
 
-                var imageData = await result.OpenReadAsync();
-                using (var stream = new FileStream(projectImagesPath, FileMode.Create))
-                {
-                    await imageData.CopyToAsync(stream);
-                }
+                string staticPad = $"/data/user/0/com.companyname.PE_Mobile_APP/files/Images/{result.FileName}";
 
-                // Toon het pad van de gekopieerde afbeelding in een melding
-                await DisplayAlert("Path", $"Foto opgeslagen op: {projectImagesPath}", "OK");
+                VerkoopAuto.ImageUrl = staticPad;
+                PreviewImage.Source = staticPad;
+
+                // Bestand lezen als een byte array
+                var photoStream = await result.OpenReadAsync();
+                var photoBytes = new byte[photoStream.Length];
+                await photoStream.ReadAsync(photoBytes.AsMemory(0, (int)photoStream.Length));
+
+                // Het pad naar de map 'Images' verkrijgen
+                var imageFolder = FileSystem.AppDataDirectory + "/Images";
+                var imagePath = Path.Combine(imageFolder, result.FileName);
+
+                // Controleer of de map 'Images' bestaat, zo niet, maak deze aan
+                if (!Directory.Exists(imageFolder))
+                    Directory.CreateDirectory(imageFolder);
+
+                // Schrijf de byte-array van de foto naar het bestand in de map 'Images'
+                File.WriteAllBytes(imagePath, photoBytes);
+
+                
+                
             }
         }
         catch (Exception ex)
