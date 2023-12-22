@@ -51,6 +51,8 @@ public partial class Login : ContentPage
         else
         {
             // Onjuiste inloggegevens
+            foutTxt.IsVisible = true;
+
         }
         
 

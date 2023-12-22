@@ -6,7 +6,25 @@
              Shell.BackgroundColor="#242527"
              >
 
+    <ScrollView>
+    <StackLayout>
 
+
+            <!-- bron https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/picker?view=net-maui-8.0-->
+            <StackLayout Orientation="Horizontal" Margin="10">
+            <Picker x:Name="Filter" Title="Filter" SelectedIndexChanged="Filter_SelectedIndexChanged">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Prijs oplopend</x:String>
+                        <x:String>Prijs aflopend</x:String>
+                        <x:String>Bouwjaar oplopend</x:String>
+                        <x:String>Bouwjaar aflopend</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </StackLayout>
+
+    
     <CollectionView x:Name="carListView">
         <CollectionView.ItemTemplate>
             <DataTemplate>
@@ -28,7 +46,7 @@
 
 
 
-
-
+    </StackLayout>
+    </ScrollView>
 
 </ContentPage>

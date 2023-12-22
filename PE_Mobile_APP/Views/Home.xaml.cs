@@ -73,6 +73,37 @@ public partial class Home : ContentPage
             await Navigation.PushAsync(new CarDetails(selectedCar));
         }
     }
+
+
+
+    private void Filter_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (carListView.ItemsSource != null && carListView.ItemsSource is List<Car> cars)
+        {
+            var selectedFilter = Filter.SelectedItem as string;
+
+            switch (selectedFilter)
+            {
+                case "Prijs oplopend":
+                    cars = cars.OrderByDescending(c => c.Price).ToList();
+                    break;
+                case "Prijs aflopend":
+                    
+                    cars = cars.OrderBy(c => c.Price).ToList();
+                    break;
+                case "Bouwjaar oplopend":
+                    cars = cars.OrderBy(c => c.Year).ToList();
+                    break;
+                case "Bouwjaar aflopend":
+                    cars = cars.OrderByDescending(c => c.Year).ToList();
+                    break;
+                default:
+                    break;
+            }
+
+            carListView.ItemsSource = cars; 
+        }
+    }
 }
 
 

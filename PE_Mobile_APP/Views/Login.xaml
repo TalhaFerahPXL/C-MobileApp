@@ -21,7 +21,8 @@
         
         <Entry Placeholder="Password" IsPassword="True" Margin="20" x:Name="wachtwoord" Text="string"/>
 
-        <Label Text="testt" FontFamily="sans-serif" FontSize="18" TextColor="WhiteSmoke" IsVisible="false"></Label>
+        <Label x:Name="foutTxt" Text="Onjuiste inloggegevens" FontFamily="sans-serif" FontSize="16" TextColor="red" IsVisible="false" Margin="20"></Label>
+        
         
         <Button Text="Log in" BackgroundColor="#C2D3ED" FontSize="15" TextColor="White" CornerRadius="5" Margin="20" Clicked="Button_Clicked"/>
 
