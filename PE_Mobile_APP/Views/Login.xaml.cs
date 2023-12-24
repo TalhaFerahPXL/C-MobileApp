@@ -29,7 +29,6 @@ public partial class Login : ContentPage
         HttpResponseMessage response = await client.PostAsync("http://10.0.2.2:5084/api/Login/LoginUser", content);
 
 
-        //HttpResponseMessage responseMessage = await client.GetAsync("http://10.0.2.2:5084/api/Login/GetUserNameByEmail");
         HttpResponseMessage responseMessage = await client.GetAsync($"http://10.0.2.2:5084/api/Login/GetUserNameByEmail?email={Email}");
 
 
@@ -50,7 +49,7 @@ public partial class Login : ContentPage
         }
         else
         {
-            // Onjuiste inloggegevens
+            
             foutTxt.IsVisible = true;
 
         }
