@@ -27,6 +27,12 @@ public partial class Home : ContentPage
 
     }
 
+    //Geeft de toegevoede autos weer wanneer je terug naar home pagina kom
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        LoadCarsAsync(); 
+    }
 
     private async Task<List<Car>> GetCarsAsync()
     {
@@ -36,7 +42,7 @@ public partial class Home : ContentPage
         {
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = await client.GetAsync($"{ApiBaseUrl}"); // Vervang "/cars" met het juiste eindpunt van jouw API
+                HttpResponseMessage response = await client.GetAsync($"{ApiBaseUrl}"); 
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -45,7 +51,7 @@ public partial class Home : ContentPage
                 }
                 else
                 {
-                    // Behandel eventuele fouten bij het ophalen van gegevens
+                    
                     Console.WriteLine("Fout bij het ophalen van auto's. Statuscode: " + response.StatusCode);
                 }
             }
@@ -61,9 +67,9 @@ public partial class Home : ContentPage
 
     private async void LoadCarsAsync()
     {
-        List<Car> cars = await GetCarsAsync(); // Roep de GetCarsAsync-methode aan om de auto-objecten op te halen
+        List<Car> cars = await GetCarsAsync(); 
 
-        carListView.ItemsSource = cars; // Wijs de lijst met auto-objecten toe aan de ItemsSource van carListView
+        carListView.ItemsSource = cars; 
     }
 
     private async void OnDetailsClicked(object sender, EventArgs e)

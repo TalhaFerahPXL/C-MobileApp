@@ -1,16 +1,22 @@
+using Newtonsoft.Json;
 using PE_Mobile_APP.Model;
+using System.Security.Policy;
+using System.Text;
+using System.Web.Http;
 
 namespace PE_Mobile_APP.Views;
 
 public partial class VerkoopPage : ContentPage
 {
+   
     public Car VerkoopAuto { get; set; }
+
 
     public VerkoopPage()
     {
         InitializeComponent();
-        VerkoopAuto = new Car(); // Maak een nieuw Auto object
-        BindingContext = VerkoopAuto; // Wijs het Auto object toe als BindingContext
+        VerkoopAuto = new Car(); 
+        BindingContext = VerkoopAuto; 
     }
 
     //Bron https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/storage/file-picker?view=net-maui-8.0&tabs=android
@@ -61,12 +67,32 @@ public partial class VerkoopPage : ContentPage
 
 
 
+    
 
-    private void OnSaveClicked(object sender, EventArgs e)
+    private async void OnSaveClicked(object sender, EventArgs e)
     {
-        // Doe iets met het VerkoopAuto object, bijvoorbeeld opslaan in een database of verder verwerken
-        // ...
 
-        DisplayAlert("Opslaan", $"merk {VerkoopAuto.ImageUrl}", "OK");
+        try
+        {
+            HttpClient client = new HttpClient();
+            var json = Newtonsoft.Json.JsonConvert.SerializeObject(VerkoopAuto);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            HttpResponseMessage response = await client.PostAsync("http://10.0.2.2:5084/Home/addAuto", content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                Console.WriteLine("Car data added successfully.");
+            }
+            else
+            {
+                Console.WriteLine($"Failed to add car data. Status code: {response.StatusCode}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred: {ex.Message}");
+        }
+
     }
 }

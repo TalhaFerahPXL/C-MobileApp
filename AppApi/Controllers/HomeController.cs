@@ -3,6 +3,7 @@ using AppApi.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 
+
 namespace AppApi.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
@@ -61,6 +62,48 @@ namespace AppApi.Controllers
                             else
                             {
                                 return NotFound("Geen auto's gevonden in de database.");
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    return StatusCode(500, "Er is een fout opgetreden: " + ex.Message);
+                }
+            }
+
+            [HttpPost("addAuto")]
+            public async Task<IActionResult> addAuto([FromBody] Auto auto)
+            {
+
+                try
+                {
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        await connection.OpenAsync();
+
+                        string query = "INSERT INTO Autos (Make, Price, Year, ImageUrl, Kilometers, Description) VALUES (@Make, @Price, @Year, @ImageUrl, @Kilometers, @Description)";
+
+                        using (SqlCommand command = new SqlCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@Make", auto.Make);
+                            command.Parameters.AddWithValue("@Price", auto.Price);
+                            command.Parameters.AddWithValue("@Year", auto.Year);
+                            command.Parameters.AddWithValue("@ImageUrl", auto.ImageUrl);
+                            command.Parameters.AddWithValue("@Kilometers", auto.Kilometers);
+                            command.Parameters.AddWithValue("@Description", auto.Description);
+
+
+
+                            int rowsAffected = await command.ExecuteNonQueryAsync();
+
+                            if (rowsAffected > 0)
+                            {
+                                return Ok("Auto is succesvol toegevoegd");
+                            }
+                            else
+                            {
+                                return BadRequest("Kan auto niet toevoegen");
                             }
                         }
                     }

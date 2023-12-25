@@ -39,11 +39,6 @@ public partial class Login : ContentPage
             string naam = await responseMessage.Content.ReadAsStringAsync();
 
             Preferences.Set("GebruikersNaam", naam);
-            
-            
-
-
-
 
             await Shell.Current.GoToAsync("//Home");
         }
