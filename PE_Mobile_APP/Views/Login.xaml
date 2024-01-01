@@ -16,10 +16,14 @@
         <Label Text="BMW ID LOGIN" FontFamily="sans-serif" FontAttributes="Bold" FontSize="28" TextColor="WhiteSmoke" HorizontalOptions="Center" Margin="0, 50"/>
 
         
-        <Entry Placeholder="Email" Margin="20" x:Name="email" Text="string"/>
+        <!--<Entry Placeholder="Email" Margin="20" x:Name="email" Text="string"/>
 
         
-        <Entry Placeholder="Password" IsPassword="True" Margin="20" x:Name="wachtwoord" Text="string"/>
+        <Entry Placeholder="Password" IsPassword="True" Margin="20" x:Name="wachtwoord" Text="string"/>-->
+
+        <Entry Placeholder="Email" Margin="20" x:Name="email" Text="{Binding Email, Mode=TwoWay}"/>
+        <Entry Placeholder="Password" IsPassword="True" Margin="20" x:Name="wachtwoord" Text="{Binding Wachtwoord, Mode=TwoWay}"/>
+
 
         <Label x:Name="foutTxt" Text="Onjuiste inloggegevens" FontFamily="sans-serif" FontSize="16" TextColor="red" IsVisible="false" Margin="20"></Label>
         

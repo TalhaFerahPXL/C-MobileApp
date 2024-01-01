@@ -54,7 +54,7 @@ public partial class VerkoopPage : ContentPage
                 // Schrijf de byte-array van de foto naar het bestand in de map 'Images'
                 File.WriteAllBytes(imagePath, photoBytes);
 
-                
+                IsVisible = true;
                 
             }
         }

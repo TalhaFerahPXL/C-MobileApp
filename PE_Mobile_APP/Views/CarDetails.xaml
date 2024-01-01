@@ -17,7 +17,8 @@
         <Label Text="{Binding Description}" Margin="0, 10"/>
 
 
-        <Button Text="Koop" Clicked="OnBuyClicked" Background="#242527" TextColor="WhiteSmoke" Margin="0, 10"/>
+        <Button Text="Koop" Style="{StaticResource defaultButton}"  Clicked="OnBuyClicked" />
+
     </StackLayout>
 
 </ContentPage>
