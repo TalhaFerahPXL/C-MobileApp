@@ -21,22 +21,24 @@ public partial class Register : ContentPage
         {
 
             HttpClient client = new HttpClient();
+
+            //Converteert de gegevens in het object Model naar een JSON-string
             var json = Newtonsoft.Json.JsonConvert.SerializeObject(Model);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
 
-            //Bron https://www.youtube.com/watch?v=kvNhLKuAySA&ab_channel=AbhayPrince
+            //Stuurt de RegisterModel naar de sql database
             HttpResponseMessage response = await client.PostAsync("http://10.0.2.2:5084/api/Register/RegisterUser", content);
 
             if (response.IsSuccessStatusCode)
             {
                 await DisplayAlert("Success", "Registration successful!", "OK");
-                // Handle success scenario
+                
             }
             else
             {
                 await DisplayAlert("Error", "Registration failed.", "OK");
-                // Handle error scenario
+                
             }
         }
         catch (Exception ex)

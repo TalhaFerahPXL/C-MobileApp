@@ -10,6 +10,7 @@ namespace PE_Mobile_APP.Model
     [Table("Autos")]
     public class Car
     {
+        public int AutoId { get; set; }
         public string Make { get; set; }
         public string Price { get; set; }
         public int Year { get; set; }

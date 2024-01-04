@@ -19,7 +19,6 @@ public partial class VerkoopPage : ContentPage
         BindingContext = VerkoopAuto; 
     }
 
-    //Bron https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/storage/file-picker?view=net-maui-8.0&tabs=android
 
     private async void OnUploadPhotoClicked(object sender, EventArgs e)
     {
@@ -32,26 +31,26 @@ public partial class VerkoopPage : ContentPage
 
             if (result != null)
             {
-
+                //static pad waar de afbeeldingen toegevoegd worden in de android emulator
                 string staticPad = $"/data/user/0/com.companyname.PE_Mobile_APP/files/Images/{result.FileName}";
 
                 VerkoopAuto.ImageUrl = staticPad;
                 PreviewImage.Source = staticPad;
+                lblPreview.IsVisible = true;
 
-                // Bestand lezen als een byte array
                 var photoStream = await result.OpenReadAsync();
                 var photoBytes = new byte[photoStream.Length];
                 await photoStream.ReadAsync(photoBytes.AsMemory(0, (int)photoStream.Length));
 
-                // Het pad naar de map 'Images' verkrijgen
+                
                 var imageFolder = FileSystem.AppDataDirectory + "/Images";
                 var imagePath = Path.Combine(imageFolder, result.FileName);
 
-                // Controleer of de map 'Images' bestaat, zo niet, maak deze aan
+                // Controleert of de map Images bestaat als niet dan maakt het eentje
                 if (!Directory.Exists(imageFolder))
                     Directory.CreateDirectory(imageFolder);
 
-                // Schrijf de byte-array van de foto naar het bestand in de map 'Images'
+                
                 File.WriteAllBytes(imagePath, photoBytes);
 
                 IsVisible = true;

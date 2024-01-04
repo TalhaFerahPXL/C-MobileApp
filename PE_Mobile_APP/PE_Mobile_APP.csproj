@@ -31,7 +31,7 @@
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
 
-		<!--Bron https://learn.microsoft.com/en-us/dotnet/maui/user-interface/images/splashscreen?view=net-maui-8.0&tabs=android-->
+		
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\splashlogo.jpg" resize="false" color="black"/>
 

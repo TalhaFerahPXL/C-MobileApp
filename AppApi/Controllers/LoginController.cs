@@ -10,6 +10,8 @@ namespace AppApi.Controllers
     {
         private string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=App;Integrated Security=True;Connect Timeout=30;Encrypt=False";
 
+        
+        
         [HttpPost("LoginUser")]
         public IActionResult LoginUser([FromBody] LoginModel model)
         {

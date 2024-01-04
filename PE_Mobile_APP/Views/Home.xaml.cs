@@ -14,8 +14,10 @@ public partial class Home : ContentPage
 		InitializeComponent();
         LoadCarsAsync();
 
+        //Haalt gebruikersnaam
         string naam = Preferences.Get("GebruikersNaam", "User");
 
+        //wordt gezocht naar het eerste kind dat een en als gevonden wordt de label.text aangepast
         AppShell shell = (AppShell)Application.Current.MainPage;
         var flyoutHeader = (StackLayout)shell.FlyoutHeader;
         var label = flyoutHeader.Children.FirstOrDefault(c => c is Label) as Label;
@@ -34,6 +36,8 @@ public partial class Home : ContentPage
         LoadCarsAsync(); 
     }
 
+
+    //Haalt de auto's objecten van de database via GetAsync en geeft ze weer in een list 
     private async Task<List<Car>> GetCarsAsync()
     {
         List<Car> cars = new List<Car>();
@@ -58,7 +62,7 @@ public partial class Home : ContentPage
         }
         catch (Exception ex)
         {
-            // Behandel eventuele uitzonderingen
+            
             Console.WriteLine("Er is een fout opgetreden: " + ex.Message);
         }
 
@@ -82,6 +86,7 @@ public partial class Home : ContentPage
 
 
 
+    //De methode sorteert de auto's op basis van de geselecteerde filteroptie en vernieuwt de weergave 
     private void Filter_SelectedIndexChanged(object sender, EventArgs e)
     {
         if (carListView.ItemsSource != null && carListView.ItemsSource is List<Car> cars)

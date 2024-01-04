@@ -18,8 +18,9 @@ namespace AppApi.Controllers
         [Route("[controller]")]
         public class HomeController : ControllerBase
         {
-            private readonly string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=App;Integrated Security=True;Connect Timeout=30;Encrypt=False"; // Vervang dit met jouw eigen verbindingsstring
+            private readonly string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=App;Integrated Security=True;Connect Timeout=30;Encrypt=False";
 
+            //Haalt alle autos van de database en voegt ze toe in een list
             [HttpGet("GetAutos")]
             public IActionResult GetAutos()
             {
@@ -31,7 +32,7 @@ namespace AppApi.Controllers
                     {
                         connection.Open();
 
-                        string query = "SELECT * FROM Autos"; // Jouw query om alle auto's op te halen
+                        string query = "SELECT * FROM Autos";
 
                         using (SqlCommand command = new SqlCommand(query, connection))
                         {
@@ -39,8 +40,10 @@ namespace AppApi.Controllers
 
                             while (reader.Read())
                             {
+                                //Bind alle properties naar het object
                                 Auto auto = new Auto
                                 {
+                                    AutoId = Convert.ToInt32(reader["AutoId"]),
                                     Make = reader["Make"].ToString(),
                                     
                                     Price = Convert.ToDecimal(reader["Price"]),
@@ -72,6 +75,7 @@ namespace AppApi.Controllers
                 }
             }
 
+            //HttpPost methode om autos toe te voegen in de database
             [HttpPost("addAuto")]
             public async Task<IActionResult> addAuto([FromBody] Auto auto)
             {
@@ -86,6 +90,7 @@ namespace AppApi.Controllers
 
                         using (SqlCommand command = new SqlCommand(query, connection))
                         {
+                            //Parameters voorkomen sql injectie
                             command.Parameters.AddWithValue("@Make", auto.Make);
                             command.Parameters.AddWithValue("@Price", auto.Price);
                             command.Parameters.AddWithValue("@Year", auto.Year);
@@ -113,6 +118,43 @@ namespace AppApi.Controllers
                     return StatusCode(500, "Er is een fout opgetreden: " + ex.Message);
                 }
             }
+
+
+            [HttpDelete]
+            public async Task<IActionResult> DeleteCar(int id)
+            {
+                try
+                {
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        await connection.OpenAsync();
+
+                        string query = "DELETE FROM Autos WHERE AutoId = @AutoId";
+
+                        using (SqlCommand command = new SqlCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@AutoId", id);
+
+                            int rowsAffected = await command.ExecuteNonQueryAsync();
+
+                            if (rowsAffected > 0)
+                            {
+                                return NoContent(); 
+                            }
+                            else
+                            {
+                                return NotFound(); 
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    return StatusCode(500, "An error occurred: " + ex.Message);
+                }
+            }
+
+
         }
     }
 

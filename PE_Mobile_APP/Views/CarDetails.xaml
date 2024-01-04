@@ -16,6 +16,8 @@
         
         <Label Text="{Binding Description}" Margin="0, 10"/>
 
+        <Label Text="{Binding AutoId}"></Label>
+
 
         <Button Text="Koop" Style="{StaticResource defaultButton}"  Clicked="OnBuyClicked" />
 

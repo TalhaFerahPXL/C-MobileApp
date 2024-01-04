@@ -2,6 +2,7 @@
 {
     public class Auto
     {
+        public int AutoId { get; set; }
         public string Make { get; set; }
         public decimal Price { get; set; }
         public int Year { get; set; }
