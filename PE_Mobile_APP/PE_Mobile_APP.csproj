@@ -33,7 +33,7 @@
 
 		
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splashlogo.jpg" resize="false" color="black"/>
+		<MauiSplashScreen Include="Resources\Splash\splashlogo.jpg" resize="false" color="black" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
@@ -47,6 +47,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Images\delete.png" />
 	  <None Remove="Images\emptyprofile.png" />
 	  <None Remove="Images\m2.jpg" />
 	  <None Remove="Images\m3comp.jpg" />
@@ -56,6 +57,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiImage Include="Images\delete.png" />
 	  <MauiImage Include="Images\emptyprofile.png" />
 	  <MauiImage Include="Images\m2.jpg" />
 	  <MauiImage Include="Images\m3comp.jpg" />
@@ -84,6 +86,9 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="Views\CarDetails.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\FavorietPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Home.xaml">

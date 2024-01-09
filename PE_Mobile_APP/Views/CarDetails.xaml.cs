@@ -43,4 +43,13 @@ public partial class CarDetails : ContentPage
 
         }
     }
+
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+        if (BindingContext is Car selectedCar)
+        {
+            FavorietenViewModel.Instance.VoegFavorietToe(selectedCar);
+            
+        }
+    }
 }

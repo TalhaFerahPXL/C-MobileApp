@@ -53,7 +53,8 @@ public partial class VerkoopPage : ContentPage
                 
                 File.WriteAllBytes(imagePath, photoBytes);
 
-                IsVisible = true;
+                lblPreview.IsVisible = true;
+                PreviewImage.IsVisible = true;
                 
             }
         }

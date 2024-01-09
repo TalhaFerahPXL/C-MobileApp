@@ -22,9 +22,9 @@
     <ShellContent Shell.NavBarIsVisible="False" Title="Aanmelden" ContentTemplate="{DataTemplate views:AanmeldenPage}" Route="AanmeldenPage" Shell.FlyoutItemIsVisible="False"/>
     <ShellContent Title="Home" ContentTemplate="{DataTemplate views:Home}" Route="Home"/>
     <ShellContent Title="verkopen" ContentTemplate="{DataTemplate views:VerkoopPage}" Route="VerkoopPage"/>
-    
-    
-    
+    <ShellContent Title="Favorieten" ContentTemplate="{DataTemplate views:FavorietPage}" Route="FavorietPage"/>
+
+
 
 
     <FlyoutItem Title="">
