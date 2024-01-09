@@ -30,26 +30,20 @@ public partial class CarDetails : ContentPage
 
             if (response.IsSuccessStatusCode)
             {
-                
+                await DisplayAlert("Aankoop voltooid", "Je hebt de auto succesvol gekocht", "OK");
+
             }
-            else if (response.StatusCode == HttpStatusCode.NotFound)
-            {
-                
-            }
-            else
-            {
-                
-            }
+
 
         }
     }
 
-    private void Button_Clicked(object sender, EventArgs e)
+    private async void Button_Clicked(object sender, EventArgs e)
     {
         if (BindingContext is Car selectedCar)
         {
             FavorietenViewModel.Instance.VoegFavorietToe(selectedCar);
-            
+            await DisplayAlert("Toegevoegd aan favorieten", $"{selectedCar.Make} is toegevoegd aan jouw favorieten", "OK");
         }
     }
 }
