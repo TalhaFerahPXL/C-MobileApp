@@ -16,11 +16,11 @@
         <Label Text="BMW ID REGISTRATIE" FontFamily="sans-serif" FontAttributes="Bold" FontSize="28" TextColor="WhiteSmoke" HorizontalOptions="Center" Margin="0, 50"/>
 
 
-        <Entry Placeholder="Naam" Margin="20" Text="{Binding naam}" />
+        <Entry Placeholder="Naam" Margin="20" Text="{Binding naam}" TextColor="WhiteSmoke"/>
 
-        <Entry Placeholder="Email" Margin="20" Text="{Binding email}" />
+        <Entry Placeholder="Email" Margin="20" Text="{Binding email}" TextColor="WhiteSmoke"/>
 
-        <Entry Placeholder="Password" IsPassword="True" Margin="20" Text="{Binding wachtwoord}" />
+        <Entry Placeholder="Password" IsPassword="True" Margin="20" Text="{Binding wachtwoord}"  TextColor="WhiteSmoke"/>
 
         <Label Text="testt" FontFamily="sans-serif" FontSize="18" TextColor="WhiteSmoke" IsVisible="false"></Label>
 

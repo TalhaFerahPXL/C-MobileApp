@@ -49,21 +49,37 @@
 	<ItemGroup>
 	  <None Remove="Images\delete.png" />
 	  <None Remove="Images\emptyprofile.png" />
+	  <None Remove="Images\favoriet.png" />
 	  <None Remove="Images\m2.jpg" />
 	  <None Remove="Images\m3comp.jpg" />
+	  <None Remove="Images\m3e90.jpg" />
+	  <None Remove="Images\m4comp.jpg" />
+	  <None Remove="Images\m4f80.jpg" />
 	  <None Remove="Images\m5comp.jpg" />
 	  <None Remove="Images\m5csbanner.jpg" />
 	  <None Remove="Images\main.jpg" />
+	  <None Remove="Images\mcars.jpg" />
+	  <None Remove="Images\search.png" />
+	  <None Remove="Images\verkoop.png" />
+	  <None Remove="Images\x5mcomp.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <MauiImage Include="Images\delete.png" />
 	  <MauiImage Include="Images\emptyprofile.png" />
+	  <MauiImage Include="Images\favoriet.png" />
 	  <MauiImage Include="Images\m2.jpg" />
-	  <MauiImage Include="Images\m3comp.jpg" />
+	  <MauiIcon Include="Images\m3comp.jpg" />
+	  <MauiImage Include="Images\m3e90.jpg" />
+	  <MauiImage Include="Images\m4comp.jpg" />
+	  <MauiImage Include="Images\m4f80.jpg" />
 	  <MauiImage Include="Images\m5comp.jpg" />
 	  <MauiImage Include="Images\m5csbanner.jpg" />
 	  <MauiImage Include="Images\main.jpg" />
+	  <MauiImage Include="Images\mcars.jpg" />
+	  <MauiImage Include="Images\search.png" />
+	  <MauiImage Include="Images\verkoop.png" />
+	  <MauiImage Include="Images\x5mcomp.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>

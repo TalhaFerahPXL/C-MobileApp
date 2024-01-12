@@ -13,16 +13,16 @@
         
         <StackLayout>
            
-           <Image Source="emptyprofile.png" MaximumHeightRequest="150"/>
+           <Image Source="mcars.jpg" MaximumHeightRequest="150"/>
 
             <Label x:Name="userNameTxt" Text="{Binding userName}" Margin="20" FontFamily="sans-serif" FontSize="20" FontAttributes="Bold" />
         </StackLayout>
     </Shell.FlyoutHeader>
 
     <ShellContent Shell.NavBarIsVisible="False" Title="Aanmelden" ContentTemplate="{DataTemplate views:AanmeldenPage}" Route="AanmeldenPage" Shell.FlyoutItemIsVisible="False"/>
-    <ShellContent Title="Kopen" ContentTemplate="{DataTemplate views:Home}" Route="Home"/>
-    <ShellContent Title="Verkopen" ContentTemplate="{DataTemplate views:VerkoopPage}" Route="VerkoopPage"/>
-    <ShellContent Title="Favorieten" ContentTemplate="{DataTemplate views:FavorietPage}" Route="FavorietPage"/>
+    <ShellContent Title="Kopen" ContentTemplate="{DataTemplate views:Home}" Route="Home" Icon="search.png"/>
+    <ShellContent Title="Verkopen" ContentTemplate="{DataTemplate views:VerkoopPage}" Route="VerkoopPage" Icon="verkoop.png"/>
+    <ShellContent Title="Favorieten" ContentTemplate="{DataTemplate views:FavorietPage}" Route="FavorietPage" Icon="favoriet.png"/>
 
 
 

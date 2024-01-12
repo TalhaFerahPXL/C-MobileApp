@@ -94,5 +94,8 @@ public partial class VerkoopPage : ContentPage
             Console.WriteLine($"An error occurred: {ex.Message}");
         }
 
+        await DisplayAlert("Succes", "Je auto is succesvol gepubliceerd!", "OK");
+
+
     }
 }

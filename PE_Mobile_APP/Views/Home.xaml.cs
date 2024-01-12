@@ -93,14 +93,14 @@ public partial class Home : ContentPage
         {
             var selectedFilter = Filter.SelectedItem as string;
 
+            
             switch (selectedFilter)
             {
                 case "Prijs oplopend":
-                    cars = cars.OrderByDescending(c => c.Price).ToList();
+                    cars = cars.OrderBy(c => Convert.ToDouble(c.Price)).ToList();
                     break;
                 case "Prijs aflopend":
-                    
-                    cars = cars.OrderBy(c => c.Price).ToList();
+                    cars = cars.OrderByDescending(c => Convert.ToDouble(c.Price)).ToList();
                     break;
                 case "Bouwjaar oplopend":
                     cars = cars.OrderBy(c => c.Year).ToList();
@@ -112,8 +112,9 @@ public partial class Home : ContentPage
                     break;
             }
 
-            carListView.ItemsSource = cars; 
+            carListView.ItemsSource = cars;
         }
+
     }
 }
 

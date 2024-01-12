@@ -17,8 +17,8 @@
 
 
 
-        <Entry Placeholder="Email" Margin="20" x:Name="email" Text="{Binding Email, Mode=TwoWay}"/>
-        <Entry Placeholder="Password" IsPassword="True" Margin="20" x:Name="wachtwoord" Text="{Binding Wachtwoord, Mode=TwoWay}"/>
+        <Entry Placeholder="Email" Margin="20" x:Name="email" Text="{Binding Email, Mode=TwoWay}" TextColor="WhiteSmoke"/>
+        <Entry Placeholder="Password" IsPassword="True" Margin="20" x:Name="wachtwoord" Text="{Binding Wachtwoord, Mode=TwoWay}" TextColor="WhiteSmoke"/>
 
 
         <Label x:Name="foutTxt" Text="Onjuiste inloggegevens" FontFamily="sans-serif" FontSize="16" TextColor="red" IsVisible="false" Margin="20"></Label>
