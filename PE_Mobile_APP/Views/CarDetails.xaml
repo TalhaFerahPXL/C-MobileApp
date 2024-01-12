@@ -11,9 +11,14 @@
             <StackLayout Padding="20" Spacing="20">
                 <Label Text="{Binding Make}" FontSize="28" FontAttributes="Bold" HorizontalOptions="Center" />
 
-                
+
+                <Grid>
                     <Image Source="{Binding ImageUrl}" Aspect="AspectFill" HeightRequest="250" />
-                
+
+                    <ImageButton Source="yellowstar.png" Clicked="Button_Clicked" MaximumHeightRequest="30" MaximumWidthRequest="30"
+                     Grid.Column="1" Grid.Row="0" VerticalOptions="Start" HorizontalOptions="End" Margin="10"/>
+                </Grid>
+
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
@@ -33,7 +38,6 @@
                 <Label Text="Beschrijving:" FontSize="14"></Label>
                 <Label Text="{Binding Description}" FontSize="14" TextColor="#888" />
 
-                <Button Text="Toevoegen aan Favorieten" Clicked="Button_Clicked" CornerRadius="8" BackgroundColor="#007AFF" TextColor="White" />
 
                 <Button Text="Koop nu" Style="{StaticResource defaultButton}" Clicked="OnBuyClicked" CommandParameter="{Binding .}" />
             </StackLayout>

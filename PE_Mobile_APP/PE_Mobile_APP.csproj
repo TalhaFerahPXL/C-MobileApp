@@ -62,6 +62,7 @@
 	  <None Remove="Images\search.png" />
 	  <None Remove="Images\verkoop.png" />
 	  <None Remove="Images\x5mcomp.jpg" />
+	  <None Remove="Images\yellowstar.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -78,6 +79,7 @@
 	  <MauiImage Include="Images\main.jpg" />
 	  <MauiImage Include="Images\mcars.jpg" />
 	  <MauiImage Include="Images\search.png" />
+	  <MauiImage Include="Images\yellowstar.png" />
 	  <MauiImage Include="Images\verkoop.png" />
 	  <MauiImage Include="Images\x5mcomp.jpg" />
 	</ItemGroup>
