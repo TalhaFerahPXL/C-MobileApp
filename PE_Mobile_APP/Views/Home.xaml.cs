@@ -7,7 +7,7 @@ namespace PE_Mobile_APP.Views;
 
 public partial class Home : ContentPage
 {
-    private const string ApiBaseUrl = "http://10.0.2.2:5084/Home/GetAutos"; // Vervang dit met de juiste URL van jouw API
+    private const string ApiBaseUrl = "http://10.0.2.2:5084/Home/GetAutos"; 
 
     public Home()
 	{
