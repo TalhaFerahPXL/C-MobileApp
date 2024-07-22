@@ -12,7 +12,8 @@ Opsomming belangrijkste kenmerken en onderdelen/features van de applicatie:
 # Logboek
 *Beknopt logboek met per datum een ingave over wat je die dag gedaan hebt (grote lijnen). Zorg dat dit overzicht er netjes uitziet op GitHub! Bijvoorbeeld:*
 * *01/01/2022: Afwerken detail pagina, start aanmaak SQLite DB* 
-* *02/01/2022: Opzoeken informatie Geolocation, aanmaak ContactView* 
+* *02/01/2022: Opzoeken informatie Geolocation, aanmaak ContactView*
+* *22/07/2024: Creëren en configureren van een Azure Storage Account.* 
 
 # Optioneel: Screenshots
 *Voorzie eventueel enkele screenshots van je app in actie.*
