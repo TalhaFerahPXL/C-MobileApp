@@ -13,7 +13,10 @@ Opsomming belangrijkste kenmerken en onderdelen/features van de applicatie:
 *Beknopt logboek met per datum een ingave over wat je die dag gedaan hebt (grote lijnen). Zorg dat dit overzicht er netjes uitziet op GitHub! Bijvoorbeeld:*
 * *01/01/2022: Afwerken detail pagina, start aanmaak SQLite DB* 
 * *02/01/2022: Opzoeken informatie Geolocation, aanmaak ContactView*
-* *22/07/2024: Creëren en configureren van een Azure Storage Account.* 
+* *22/07/2024: Creëren en configureren van een Azure Storage Account.*
+* *23/07/2024: Methodes om door gebruikers geüploade foto's op te slaan in de Azure Cloud*
+* *25/07/2024: Wijzigingen in SSMS Tabellen en Toevoeging van Nieuwe UserFavorites Tabel*
+* *26/07/2024: Wijzigingen aan het FavorietenViewModel voor Opslag van Favoriete Auto's in de Database*
 
 # Optioneel: Screenshots
 *Voorzie eventueel enkele screenshots van je app in actie.*
