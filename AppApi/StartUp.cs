@@ -39,7 +39,7 @@ namespace AppApi
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseCors("AllowSpecificOrigins"); // Gebruik de gedefinieerde CORS-beleidsnaam
+            app.UseCors("AllowSpecificOrigins"); 
 
             app.UseHttpsRedirection();
             app.UseRouting();

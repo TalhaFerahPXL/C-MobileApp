@@ -14,9 +14,10 @@ public partial class FavorietPage : ContentPage
     {
         if (sender is SwipeItem swipeItem && swipeItem.CommandParameter is Car car)
         {
-            // Verwijder de auto uit de lijst
-            FavorietenViewModel.Instance.FavorieteAutoLijst.Remove(car);
+            
+            FavorietenViewModel.Instance.VerwijderFavoriet(car); 
         }
     }
+
 
 }

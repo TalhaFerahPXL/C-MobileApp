@@ -7,7 +7,8 @@ namespace PE_Mobile_APP.Views;
 
 public partial class Home : ContentPage
 {
-    private const string ApiBaseUrl = "http://10.0.2.2:5084/Home/GetAutos"; 
+    private const string ApiBaseUrl = "http://10.0.2.2:5084/Home/GetAutos";
+    
 
     public Home()
 	{
@@ -16,6 +17,8 @@ public partial class Home : ContentPage
 
         //Haalt gebruikersnaam
         string naam = Preferences.Get("GebruikersNaam", "User");
+        var UserId = Preferences.Get("UserId", null);
+        
 
         //wordt gezocht naar het eerste kind dat een en als gevonden wordt de label.text aangepast
         AppShell shell = (AppShell)Application.Current.MainPage;
@@ -46,8 +49,8 @@ public partial class Home : ContentPage
         {
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = await client.GetAsync($"{ApiBaseUrl}"); 
-
+                HttpResponseMessage response = await client.GetAsync($"{ApiBaseUrl}");
+            http://10.0.2.2:5084/Home/GetAutos
                 if (response.IsSuccessStatusCode)
                 {
                     string carsJson = await response.Content.ReadAsStringAsync();

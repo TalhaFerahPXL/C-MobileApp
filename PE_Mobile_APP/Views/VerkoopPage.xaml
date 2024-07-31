@@ -19,6 +19,8 @@
         <Label x:Name="lblPreview" Text="Preview Image" TextColor="#242527" Margin="20" IsVisible="false"></Label>
         
         <Image x:Name="PreviewImage" Source="{Binding ImageUrl}" Margin="20" IsVisible="false"/>
+        
+        
 
 
         <Button Text="Opslaan" Clicked="OnSaveClicked" BackgroundColor="#242527" TextColor="WhiteSmoke" Margin="0, 20"/>

@@ -40,7 +40,6 @@ namespace AppApi.Controllers
 
                             while (reader.Read())
                             {
-                                //Bind alle properties naar het object
                                 Auto auto = new Auto
                                 {
                                     AutoId = Convert.ToInt32(reader["AutoId"]),

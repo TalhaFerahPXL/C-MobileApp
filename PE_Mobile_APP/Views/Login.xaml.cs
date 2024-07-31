@@ -16,35 +16,35 @@ public partial class Login : ContentPage
 
     private async void Button_Clicked(object sender, EventArgs e)
     {
-
         HttpClient client = new HttpClient();
         var json = Newtonsoft.Json.JsonConvert.SerializeObject(Model);
         var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-        HttpResponseMessage response = await client.PostAsync("http://10.0.2.2:5084/api/Login/LoginUser", content);
+        HttpResponseMessage loginResponse = await client.PostAsync("http://10.0.2.2:5084/api/Login/LoginUser", content);
 
-        //haalt gebruikersnaam op via email
-        HttpResponseMessage responseMessage = await client.GetAsync($"http://10.0.2.2:5084/api/Login/GetUserNameByEmail?email={Model.Email}");
-
-
-        if (response.IsSuccessStatusCode)
+        if (loginResponse.IsSuccessStatusCode)
         {
-            
-            string naam = await responseMessage.Content.ReadAsStringAsync();
+            // Haalt gebruikersnaam en UserId op via email
+            HttpResponseMessage response = await client.GetAsync($"http://10.0.2.2:5084/api/Login/GetUserNameByEmail?email={Model.Email}");
+            if (response.IsSuccessStatusCode)
+            {
+                var responseContent = await response.Content.ReadAsStringAsync();
+                var userDetails = Newtonsoft.Json.JsonConvert.DeserializeObject<dynamic>(responseContent);
 
-            Preferences.Set("GebruikersNaam", naam);
+                Preferences.Set("GebruikersNaam", (string)userDetails.userName);
+                Preferences.Set("UserId", (string)userDetails.userId);
 
-            await Shell.Current.GoToAsync("//Home");
+                await Shell.Current.GoToAsync("//Home");
+            }
+            else
+            {
+                foutTxt.IsVisible = true;  
+            }
         }
         else
         {
-            
-            foutTxt.IsVisible = true;
-
+            foutTxt.IsVisible = true;  // Toon foutbericht indien login mislukt
         }
-        
-
-
-        
     }
+
 }

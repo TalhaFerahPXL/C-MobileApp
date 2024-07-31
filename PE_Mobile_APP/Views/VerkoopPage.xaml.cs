@@ -3,6 +3,9 @@ using PE_Mobile_APP.Model;
 using System.Security.Policy;
 using System.Text;
 using System.Web.Http;
+using Azure.Storage.Blobs;
+using Microsoft.Maui.Storage;
+using Azure.Storage.Blobs.Models;
 
 namespace PE_Mobile_APP.Views;
 
@@ -31,31 +34,36 @@ public partial class VerkoopPage : ContentPage
 
             if (result != null)
             {
-                //static pad waar de afbeeldingen toegevoegd worden in de android emulator
-                string staticPad = $"/data/user/0/com.companyname.PE_Mobile_APP/files/Images/{result.FileName}";
-
-                VerkoopAuto.ImageUrl = staticPad;
-                PreviewImage.Source = staticPad;
-                lblPreview.IsVisible = true;
-
                 var photoStream = await result.OpenReadAsync();
-                var photoBytes = new byte[photoStream.Length];
-                await photoStream.ReadAsync(photoBytes.AsMemory(0, (int)photoStream.Length));
+
+                string connectionString = "DefaultEndpointsProtocol=https;AccountName=pemobileapp;AccountKey=nXpkgkPDCv/e2t1hURJJcA5pwXJTFmC2AfZI0mQqkET2lxvdp/ikv/95eX3ypxNRSIzKmu4Sug53+AStDoS6yg==;EndpointSuffix=core.windows.net";
+                string containerName = "mobileappcontainer";
+
+                var blobContainerClient = new BlobContainerClient(connectionString, containerName);
+
+                await blobContainerClient.CreateIfNotExistsAsync();
+
+                var blobClient = blobContainerClient.GetBlobClient(result.FileName);
+
+                var blobHttpHeaders = new BlobHttpHeaders
+                {
+                    ContentType = "image/jpeg" 
+                };
 
                 
-                var imageFolder = FileSystem.AppDataDirectory + "/Images";
-                var imagePath = Path.Combine(imageFolder, result.FileName);
-
-                // Controleert of de map Images bestaat als niet dan maakt het eentje
-                if (!Directory.Exists(imageFolder))
-                    Directory.CreateDirectory(imageFolder);
+                await blobClient.UploadAsync(photoStream, new BlobUploadOptions
+                {
+                    HttpHeaders = blobHttpHeaders
+                });
 
                 
-                File.WriteAllBytes(imagePath, photoBytes);
+                var blobUrl = blobClient.Uri.AbsoluteUri;
 
+                
+                VerkoopAuto.ImageUrl = blobUrl;
+                PreviewImage.Source = blobUrl; 
                 lblPreview.IsVisible = true;
                 PreviewImage.IsVisible = true;
-                
             }
         }
         catch (Exception ex)
@@ -67,7 +75,7 @@ public partial class VerkoopPage : ContentPage
 
 
 
-    
+
 
     private async void OnSaveClicked(object sender, EventArgs e)
     {

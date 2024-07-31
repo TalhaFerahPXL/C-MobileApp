@@ -54,7 +54,7 @@ namespace AppApi.Controllers
 
 
 
-        //Vind de naam van de user via email tijdens login
+        //Vind de naam en userid van de user via email tijdens login
 
         [HttpGet("GetUserNameByEmail")]
         public IActionResult GetUserNameByEmail(string email)
@@ -69,22 +69,23 @@ namespace AppApi.Controllers
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-
-                    string query = "SELECT Naam FROM Users WHERE Email = @Email";
+                    string query = "SELECT Naam, UserId FROM Users WHERE Email = @Email";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@Email", email);
-
-                        string userName = (string)command.ExecuteScalar();
-
-                        if (!string.IsNullOrEmpty(userName))
+                        using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            return Ok(userName);
-                        }
-                        else
-                        {
-                            return NotFound("Gebruiker niet gevonden voor dit e-mailadres.");
+                            if (reader.Read())
+                            {
+                                var userName = reader["Naam"].ToString();
+                                var userId = reader["UserId"].ToString();
+                                return Ok(new { UserName = userName, UserId = userId });
+                            }
+                            else
+                            {
+                                return NotFound("Gebruiker niet gevonden voor dit e-mailadres.");
+                            }
                         }
                     }
                 }
