@@ -17,6 +17,7 @@ Opsomming belangrijkste kenmerken en onderdelen/features van de applicatie:
 * **23/07/2024:** Methodes om door gebruikers geüploade foto's op te slaan in de Azure Cloud
 * **25/07/2024:** Wijzigingen in SSMS Tabellen en Toevoeging van Nieuwe UserFavorites Tabel
 * **26/07/2024:** Wijzigingen aan het FavorietenViewModel voor Opslag van Favoriete Auto's in de Database
+* **26/07/2024:** EmailValidationBehavior toegevoegd
   
 
 # Optioneel: Screenshots
