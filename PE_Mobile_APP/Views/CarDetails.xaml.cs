@@ -5,6 +5,7 @@ namespace PE_Mobile_APP.Views;
 
 public partial class CarDetails : ContentPage
 {
+
 	public CarDetails(Car car)
 	{
 		InitializeComponent();
@@ -43,6 +44,7 @@ public partial class CarDetails : ContentPage
         if (BindingContext is Car selectedCar)
         {
             FavorietenViewModel.Instance.VoegFavorietToe(selectedCar);
+
             await DisplayAlert("Toegevoegd aan favorieten", $"{selectedCar.Make} is toegevoegd aan jouw favorieten", "OK");
         }
     }

@@ -15,7 +15,7 @@ public partial class FavorietPage : ContentPage
         if (sender is SwipeItem swipeItem && swipeItem.CommandParameter is Car car)
         {
             
-            FavorietenViewModel.Instance.VerwijderFavoriet(car); 
+           FavorietenViewModel.Instance.VerwijderFavoriet(car); 
         }
     }
 

@@ -41,6 +41,7 @@
        FontAttributes="Italic"
        TextColor="Gray"
                Margin="0, 150"
+               IsVisible="false"
                >
             <Label.Triggers>
                 <DataTrigger TargetType="Label" Binding="{Binding FavorieteAutoLijst.Count}" Value="0">

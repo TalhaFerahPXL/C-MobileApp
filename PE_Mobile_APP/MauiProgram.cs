@@ -1,4 +1,7 @@
-﻿namespace PE_Mobile_APP;
+﻿using PE_Mobile_APP.Services;
+using PE_Mobile_APP.Services.Interface;
+
+namespace PE_Mobile_APP;
 
 public static class MauiProgram
 {
@@ -17,7 +20,10 @@ public static class MauiProgram
 		builder.Services.AddSingleton<AanmeldenViewModel>();
 
 		builder.Services.AddSingleton<AanmeldenPage>();
+        builder.Services.AddSingleton<HttpClient>();
+        builder.Services.AddSingleton<IFavorietenRepository, FavorietenRepository>();
+        builder.Services.AddSingleton<FavorietenViewModel>();
 
-		return builder.Build();
+        return builder.Build();
 	}
 }
