@@ -13,20 +13,11 @@ Opsomming belangrijkste kenmerken en onderdelen/features van de applicatie:
 
 # Logboek
 
-* *06/12/2023: Ontwerp voor inloggen, aanmelden en de homepagina is gemaakt*
-* *07/12/2023: Gestart met het coderen van inlog logica*
-* *09/12/2023: Inlog en registreren logica's zijn af*
-* *14/12/2023: Gestart met het aanmaken van de sql database voor auto informatie en de logica voor homecontroller*
-* *16/12/2023: HomeController is afgemaakt de auto gegevens komen tevoorschijn in de home pagina*
-* *20/12/2023: Verkoop pagina is gemaakt*
-* *21/12/2023: gebruikers kunnnen foto uploaden om een auto te verkopen*
-* *22/12/2023: Picker toegevoegd, gebruikers kunnen nu de autos filteren*
-* *25/12/2023: Add car controller is af gebruikers kunnen nu hun autos verkopen*
-* *29/12/2023: Design aanpassingen gedaan op de verschillende paginas en een custom splash screen toegevoegd*
-* *04/01/2023: DeleteCar methode toegevoegd nu worden de verkochte auto's verwijderd uit da database*
-* *07/01/2023: De functies voor het toevoegen van een auto naar de favorieten pagina zijn af*
-* *09/01/2023: *Design aanpassingen op de details en favorieten pagina's*
-* *11/01/2023: *Laatste Design aanpassingen overal*
+* **22/07/2024:** Creëren en configureren van een Azure Storage Account.
+* **23/07/2024:** Methodes om door gebruikers geüploade foto's op te slaan in de Azure Cloud
+* **25/07/2024:** Wijzigingen in SSMS Tabellen en Toevoeging van Nieuwe UserFavorites Tabel
+* **26/07/2024:** Wijzigingen aan het FavorietenViewModel voor Opslag van Favoriete Auto's in de Database
+* **26/07/2024:** EmailValidationBehavior toegevoegd
   
 
 # Optioneel: Screenshots
