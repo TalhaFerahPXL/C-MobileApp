@@ -14,10 +14,15 @@ Opsomming belangrijkste kenmerken en onderdelen/features van de applicatie:
 # Logboek
 
 * **22/07/2024:** Creëren en configureren van een Azure Storage Account.
-* **23/07/2024:** Methodes om door gebruikers geüploade foto's op te slaan in de Azure Cloud
-* **25/07/2024:** Wijzigingen in SSMS Tabellen en Toevoeging van Nieuwe UserFavorites Tabel
-* **26/07/2024:** Wijzigingen aan het FavorietenViewModel voor Opslag van Favoriete Auto's in de Database
-* **26/07/2024:** EmailValidationBehavior toegevoegd
+* **23/07/2024:** Methodes om door gebruikers geüploade foto's op te slaan in de Azure Cloud.
+* **25/07/2024:** Wijzigingen in SSMS Tabellen en Toevoeging van Nieuwe UserFavorites Tabel.
+* **26/07/2024:** Wijzigingen aan het FavorietenViewModel voor Opslag van Favoriete Auto's in de Database.
+* **26/07/2024:** EmailValidationBehavior toegevoegd.
+* **04/08/2024:** Interface en repository toegevoegd.
+* **05/08/2024:** Veranderingen in de favorietenviewmodel en de favoriet pagina.
+
+
+
   
 
 # Optioneel: Screenshots
