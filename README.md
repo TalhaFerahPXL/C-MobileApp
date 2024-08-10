@@ -13,11 +13,29 @@ Opsomming belangrijkste kenmerken en onderdelen/features van de applicatie:
 
 # Logboek
 
+Eerste zit
+* *06/12/2023: Ontwerp voor inloggen, aanmelden en de homepagina is gemaakt*
+* *07/12/2023: Gestart met het coderen van inlog logica*
+* *09/12/2023: Inlog en registreren logica's zijn af*
+* *14/12/2023: Gestart met het aanmaken van de sql database voor auto informatie en de logica voor homecontroller*
+* *16/12/2023: HomeController is afgemaakt de auto gegevens komen tevoorschijn in de home pagina*
+* *20/12/2023: Verkoop pagina is gemaakt*
+* *21/12/2023: gebruikers kunnnen foto uploaden om een auto te verkopen*
+* *22/12/2023: Picker toegevoegd, gebruikers kunnen nu de autos filteren*
+* *25/12/2023: Add car controller is af gebruikers kunnen nu hun autos verkopen*
+* *29/12/2023: Design aanpassingen gedaan op de verschillende paginas en een custom splash screen toegevoegd*
+* *04/01/2023: DeleteCar methode toegevoegd nu worden de verkochte auto's verwijderd uit da database*
+* *07/01/2023: De functies voor het toevoegen van een auto naar de favorieten pagina zijn af*
+* *09/01/2023: *Design aanpassingen op de details en favorieten pagina's*
+* *11/01/2023: *Laatste Design aanpassingen overal*
+
+Tweedezit uitwerking
 * **22/07/2024:** Creëren en configureren van een Azure Storage Account.
 * **23/07/2024:** Methodes om door gebruikers geüploade foto's op te slaan in de Azure Cloud.
+* **24/07/2024:** Methode in VerkoopPage.xaml voor het ophalen van door de gebruiker geüploade foto’s uit de cloud en het opslaan van deze foto’s in mijn database
 * **25/07/2024:** Wijzigingen in SSMS Tabellen en Toevoeging van Nieuwe UserFavorites Tabel.
 * **26/07/2024:** Wijzigingen aan het FavorietenViewModel voor Opslag van Favoriete Auto's in de Database.
-* **26/07/2024:** EmailValidationBehavior toegevoegd.
+* **27/07/2024:** EmailValidationBehavior toegevoegd.
 * **04/08/2024:** Interface en repository toegevoegd.
 * **05/08/2024:** Veranderingen in de favorietenviewmodel en de favoriet pagina.
 
@@ -54,6 +72,9 @@ https://www.youtube.com/watch?v=RJm0XDQth7A&ab_channel=T
 *Gebruik van File Picker om foto's toe te voegen*
 * *https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/storage/file-picker?view=net-maui-8.0&tabs=android*
 
+* Gebruik van Azure functies en blob opslag
+* *https://learn.microsoft.com/en-us/azure/storage/blobs/blob-upload-function-trigger?tabs=azure-portal*
+
 *Gebruik van Picker om filter waardes weer te geven*
 * *https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/picker?view=net-maui-8.0*
 
@@ -62,6 +83,15 @@ https://www.youtube.com/watch?v=RJm0XDQth7A&ab_channel=T
 
 *Voor het aanmaken van een converter*
 * *https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/data-binding/converters?view=net-maui-8.0*
+
+* Gebruik van behavoir<entry>
+*  *https://learn.microsoft.com/en-us/previous-versions/xamarin/xamarin-forms/app-fundamentals/behaviors/creating*
+
+*  Viewmodel architectuur in mauiapp
+*  *https://blackboard.pxl.be/ultra/courses/_49036_1/outline/file/_1705232_1*
+
+*  Singleton design pattern voor de viewmodel
+*  *https://www.tutorialsteacher.com/csharp/singleton*
 
   
 
