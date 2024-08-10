@@ -38,6 +38,8 @@ Tweedezit uitwerking
 * **27/07/2024:** EmailValidationBehavior toegevoegd.
 * **04/08/2024:** Interface en repository toegevoegd.
 * **05/08/2024:** Veranderingen in de favorietenviewmodel en de favoriet pagina.
+* **10/08/2024:** RegisterViewModel en LoginViewModel Toegevoegd.
+
 
 
 
