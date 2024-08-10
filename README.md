@@ -1,38 +1,73 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/amEUWRZy)
 # Project C# Mobile 2023-2024
-Naam en email: **Vul hier je naam + email in**
+Naam en email: **Ferah Talha + Talha.ferah@student.pxl.be**
 
-Titel applicatie: **Vul de titel/naam van je app in**
+Titel applicatie: **My Bmw App**
 
-*Korte samenvatting van de app (minstens 5 zinnen)*
+*Deze C# Mobile-applicatie voor autohandel biedt een gebruiksvriendelijk platform waar gebruikers moeiteloos auto's kunnen kopen, verkopen en favorieten kunnen markeren. De app heeft een uitgebreide database met gedetailleerde specificaties en prijsinformatie van verschillende voertuigen. Gebruikers kunnen hun auto's gedetailleerd presenteren met nauwkeurige informatie, waardoor potentiële kopers weloverwogen beslissingen kunnen nemen. Het platform ondersteunt soepele interacties tussen kopers en verkopers, en biedt een intuïtieve gebruikerservaring om gemakkelijk door beschikbare aanbiedingen te bladeren en transacties uit te voeren.*
 
 Opsomming belangrijkste kenmerken en onderdelen/features van de applicatie: 
-* *Som ze hier op*
+* Auto Kopen en Verkopen: Gebruikers kunnen moeiteloos auto's zowel kopen als verkopen via het platform.
+* Filteropties: Het platform biedt diverse filters op basis van prijsklasse & bouwjaar waardoor gebruikers gericht kunnen zoeken naar auto's die aan hun voorkeuren voldoen.
+* Favorietenlijst: Gebruikers kunnen favoriete auto's toevoegen aan een persoonlijke lijst voor gemakkelijke toegang en vergelijking van hun favoriete voertuigen.
+* Gedetailleerde Voertuiginformatie: De app toont uitgebreide informatie over auto's, inclusief specificaties zoals merk, model, bouwjaar, kilometerstand en prijs.
 
 # Logboek
-*Beknopt logboek met per datum een ingave over wat je die dag gedaan hebt (grote lijnen). Zorg dat dit overzicht er netjes uitziet op GitHub! Bijvoorbeeld:*
-* *01/01/2022: Afwerken detail pagina, start aanmaak SQLite DB* 
-* *02/01/2022: Opzoeken informatie Geolocation, aanmaak ContactView*
-* *22/07/2024: Creëren en configureren van een Azure Storage Account.*
-* *23/07/2024: Methodes om door gebruikers geüploade foto's op te slaan in de Azure Cloud*
-* *25/07/2024: Wijzigingen in SSMS Tabellen en Toevoeging van Nieuwe UserFavorites Tabel*
-* *26/07/2024: Wijzigingen aan het FavorietenViewModel voor Opslag van Favoriete Auto's in de Database*
+
+* **22/07/2024:** Creëren en configureren van een Azure Storage Account.
+* **23/07/2024:** Methodes om door gebruikers geüploade foto's op te slaan in de Azure Cloud.
+* **25/07/2024:** Wijzigingen in SSMS Tabellen en Toevoeging van Nieuwe UserFavorites Tabel.
+* **26/07/2024:** Wijzigingen aan het FavorietenViewModel voor Opslag van Favoriete Auto's in de Database.
+* **26/07/2024:** EmailValidationBehavior toegevoegd.
+* **04/08/2024:** Interface en repository toegevoegd.
+* **05/08/2024:** Veranderingen in de favorietenviewmodel en de favoriet pagina.
+
+
+
+  
 
 # Optioneel: Screenshots
-*Voorzie eventueel enkele screenshots van je app in actie.*
+Aanmelden Of Registreren Opties Pagina
+<p align="center"><img src="AppScreenshots/2.png" width="300"></p>
+
+Home Koop Pagina
+<p align="center"><img src="AppScreenshots/3.png" width="300"></p>
+
+Auto Details Pagina
+<p align="center"><img src="AppScreenshots/1.png" width="300"></p>
+
+Favorieten Auto's Pagina
+<p align="center"><img src="AppScreenshots/4.png" width="300"></p>
+
+Verkopen Pagina
+<p align="center"><img src="AppScreenshots/5.png" width="300"></p>
+
+
 
 # Videolink
-*Voorzie een link naar een video*
+https://www.youtube.com/watch?v=RJm0XDQth7A&ab_channel=T
 
 # Bronnen
-* *Zorg dat je de bronnen vermeld in een lijst.*
-* *Vermeld kort bij elke bron waarvoor je ze gebruikt hebt.*
-* *Zorg voor een verzorgde opmaak.*
+
+*Voor het aanmaken van een custom splash screen:*
+* *https://learn.microsoft.com/en-us/dotnet/maui/user-interface/images/splashscreen?view=net-maui-8.0&tabs=android*
+
+*Gebruik van File Picker om foto's toe te voegen*
+* *https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/storage/file-picker?view=net-maui-8.0&tabs=android*
+
+*Gebruik van Picker om filter waardes weer te geven*
+* *https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/picker?view=net-maui-8.0*
+
+*Het maken van een connectie tussen android emulator en local web Api*
+* *https://www.youtube.com/watch?v=kvNhLKuAySA&ab_channel=AbhayPrince*
+
+*Voor het aanmaken van een converter*
+* *https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/data-binding/converters?view=net-maui-8.0*
+
+  
 
 # Future work
-*Wat zou je nog aanpassen/verbeteren mocht je meer tijd hebben? Hoe zou je dit aanpakken?* 
+* Als er meer tijd beschikbaar was, zou ik de mogelijkheid om meerdere afbeeldingen toe te voegen aan autoaanbiedingen verbeteren. Dit zou ik aanpakken door de gegevensstructuur aan te passen om meerdere afbeeldingen per auto toe te staan, de gebruikersinterface bij te werken voor het uploaden en bekijken van meerdere afbeeldingen, en de opslag en laadtijd van deze afbeeldingen te optimaliseren binnen de app. Dit zou de gebruikerservaring verbeteren door potentiële kopers een uitgebreider beeld van het voertuig te geven.
 
+* Als er extra tijd was, zou ik avatar- en profielinstellingen toevoegen aan de app. Dit zou ik aanpakken door een sectie te creëren waar gebruikers hun profiel kunnen aanpassen, inclusief het uploaden van een profielfoto (avatar), het wijzigen van gebruikersgegevens en het instellen van voorkeuren. Ook zou ik de backend updaten om profielinformatie en avatars op te slaan en de gebruikersinterface bijwerken zodat gebruikers gemakkelijk hun profielinformatie kunnen bewerken en hun avatar kunnen tonen.
 
----
-## *Opmerking**
-*De tekst die schuingedrukt staat (dus ook deze) mag je verwijderen uit de README! De tekst die je zelf schrijft is niet schuingedrukt. Zorg dat alles in deze README netjes getoond wordt. *
+* Als ik de mogelijkheid had om meer tijd te besteden aan de app, zou ik een uitgebreidere backend-implementatie toevoegen voor permanente gegevensopslag. Dit zou inhouden dat alle gebruikersgegevens, inclusief profielinstellingen, favoriete auto's en aanbiedingen, continu worden opgeslagen in de backend, zelfs wanneer de gebruiker de applicatie afsluit of de sessie beëindigt. Hierdoor zou de app een meer consistente en persistente gebruikerservaring bieden, waarbij gebruikers hun voorkeuren en gegevens behouden, ongeacht wanneer ze de app openen of sluiten. 

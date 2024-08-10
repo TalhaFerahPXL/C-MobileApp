@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PE_Mobile_APP.Views.VerkoopPage"
+             Title="VerkoopPage"
+             Shell.BackgroundColor="#242527"
+             >
+
+    <StackLayout Padding="20">
+        <Entry Placeholder="Merk" Text="{Binding Make}" Margin="0, 10"/>
+        <Entry Placeholder="Prijs" Text="{Binding Price}" Margin="0, 10"/>
+        <Entry Placeholder="Bouwjaar" Text="{Binding Year}" Margin="0, 10" />
+        <Entry Placeholder="Kilometers" Text="{Binding Kilometers}" Margin="0, 10" />
+        <Entry Placeholder="Beschrijving" Text="{Binding Description}" Margin="0, 0" HeightRequest="100"/>
+
+
+        <Button Text="Foto uploaden" Clicked="OnUploadPhotoClicked" BackgroundColor="#242527" TextColor="WhiteSmoke" Margin="0, 20"/>
+
+        <Label x:Name="lblPreview" Text="Preview Image" TextColor="#242527" Margin="20" IsVisible="false"></Label>
+        
+        <Image x:Name="PreviewImage" Source="{Binding ImageUrl}" Margin="20" IsVisible="false"/>
+        
+        
+
+
+        <Button Text="Opslaan" Clicked="OnSaveClicked" BackgroundColor="#242527" TextColor="WhiteSmoke" Margin="0, 20"/>
+
+        
+
+
+
+    </StackLayout>
+
+</ContentPage>

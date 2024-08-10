@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behaviors="clr-namespace:PE_Mobile_APP.Behaviors"
+             x:Class="PE_Mobile_APP.Views.Register"
+             Title="Register"
+             Shell.BackgroundColor="#242527">
+
+
+    <StackLayout BackgroundColor="#242527">
+
+
+        <Image Source="m5csbanner.png" Aspect="AspectFill" HeightRequest="200" />
+
+
+        <Label Text="BMW ID REGISTRATIE" FontFamily="sans-serif" FontAttributes="Bold" FontSize="28" TextColor="WhiteSmoke" HorizontalOptions="Center" Margin="0, 50"/>
+
+
+        <Entry Placeholder="Naam" Margin="20" Text="{Binding naam}" TextColor="WhiteSmoke"/>
+
+        <Entry Placeholder="Email"
+       Margin="20"
+       Text="{Binding email}"
+       TextColor="WhiteSmoke">
+            <Entry.Behaviors>
+                <behaviors:EmailValidationBehavior />
+            </Entry.Behaviors>
+        </Entry>
+
+        <Entry Placeholder="Password" IsPassword="True" Margin="20" Text="{Binding wachtwoord}"  TextColor="WhiteSmoke"/>
+
+        <Label Text="testt" FontFamily="sans-serif" FontSize="18" TextColor="WhiteSmoke" IsVisible="false"></Label>
+
+        <Button Text="Registreren" BackgroundColor="#C2D3ED" FontSize="15" TextColor="White" CornerRadius="5" Margin="20" Clicked="Button_Clicked" />
+
+    </StackLayout>
+
+
+</ContentPage>
