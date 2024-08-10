@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:PE_Mobile_APP.ViewModels"
              x:Class="PE_Mobile_APP.Views.Login"
              Title="Login"
              Shell.BackgroundColor="#242527"
+             x:DataType="vm:LoginViewModel"
              >
 
 
@@ -18,13 +20,13 @@
 
 
         <Entry Placeholder="Email" Margin="20" x:Name="email" Text="{Binding Email, Mode=TwoWay}" TextColor="WhiteSmoke"/>
-        <Entry Placeholder="Password" IsPassword="True" Margin="20" x:Name="wachtwoord" Text="{Binding Wachtwoord, Mode=TwoWay}" TextColor="WhiteSmoke"/>
+        <Entry Placeholder="Password" IsPassword="True" Margin="20" x:Name="wachtwoord" Text="{Binding Password, Mode=TwoWay}" TextColor="WhiteSmoke"/>
 
 
-        <Label x:Name="foutTxt" Text="Onjuiste inloggegevens" FontFamily="sans-serif" FontSize="16" TextColor="red" IsVisible="false" Margin="20"></Label>
-        
-        
-        <Button Text="Log in" BackgroundColor="#C2D3ED" FontSize="15" TextColor="White" CornerRadius="5" Margin="20" Clicked="Button_Clicked"/>
+        <Label x:Name="foutTxt" Text="Onjuiste inloggegevens" FontFamily="sans-serif" FontSize="16" TextColor="red" IsVisible="{Binding IsErrorVisible}" Margin="20"></Label>
+
+
+        <Button Text="Log in" BackgroundColor="#C2D3ED" FontSize="15" TextColor="White" CornerRadius="5" Margin="20" Command="{Binding LoginCommand}"/>
 
     </StackLayout>
 

@@ -15,6 +15,8 @@ namespace PE_Mobile_APP.ViewModels
 
         //singleton desing https://www.tutorialsteacher.com/csharp/singleton
         private static FavorietenViewModel _instance;
+
+        //ik gebruik hier een Instance om globaal toegang te krijgen uit meerdere klasses
         public static FavorietenViewModel Instance => _instance ??= new FavorietenViewModel(new FavorietenRepository(new HttpClient())); 
 
 

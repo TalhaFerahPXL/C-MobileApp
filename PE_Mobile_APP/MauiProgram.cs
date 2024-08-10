@@ -23,6 +23,8 @@ public static class MauiProgram
         builder.Services.AddSingleton<HttpClient>();
         builder.Services.AddSingleton<IFavorietenRepository, FavorietenRepository>();
         builder.Services.AddSingleton<FavorietenViewModel>();
+        builder.Services.AddSingleton<RegisterViewModel>();
+        builder.Services.AddSingleton<LoginViewModel>();
 
         return builder.Build();
 	}
