@@ -15,7 +15,7 @@ public partial class Home : ContentPage
 		InitializeComponent();
         LoadCarsAsync();
 
-        //Haalt gebruikersnaam
+        //Haalt gebruikersnaam en userid
         string naam = Preferences.Get("GebruikersNaam", "User");
         var UserId = Preferences.Get("UserId", null);
         

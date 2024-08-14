@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PE_Mobile_APP.Views.Settings"
+             Shell.BackgroundColor="#242527"
+             Title="Settings">
+    <VerticalStackLayout Spacing="20" Padding="30">
+        
+        <Entry x:Name="nameEntry"
+               Placeholder="Voer je nieuwe gebruikersnaam"
+               Text=""
+               VerticalOptions="Start" 
+               HorizontalOptions="FillAndExpand" 
+               IsEnabled="False"
+               />
+
+        <Button Text="Wijzig gebruikersnaam"
+                Clicked="Button_Clicked"
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="#242527" TextColor="WhiteSmoke" Margin="0, 1"
+                />
+
+        <Button Text="Update gebruikersnaam"
+                Clicked="OnUpdateClicked"
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="#242527" TextColor="WhiteSmoke" Margin="0, 1"
+                />
+
+
+
+    </VerticalStackLayout>
+</ContentPage>

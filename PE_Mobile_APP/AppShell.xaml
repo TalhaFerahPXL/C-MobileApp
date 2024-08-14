@@ -23,6 +23,7 @@
     <ShellContent Title="Kopen" ContentTemplate="{DataTemplate views:Home}" Route="Home" Icon="search.png"/>
     <ShellContent Title="Verkopen" ContentTemplate="{DataTemplate views:VerkoopPage}" Route="VerkoopPage" Icon="verkoop.png"/>
     <ShellContent Title="Favorieten" ContentTemplate="{DataTemplate views:FavorietPage}" Route="FavorietPage" Icon="favoriet.png"/>
+    <ShellContent Title="Settings" ContentTemplate="{DataTemplate views:Settings}" Route="Settings" Icon="settings.png"/>
 
 
 

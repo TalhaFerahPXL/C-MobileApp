@@ -60,6 +60,7 @@
 	  <None Remove="Images\main.jpg" />
 	  <None Remove="Images\mcars.jpg" />
 	  <None Remove="Images\search.png" />
+	  <None Remove="Images\settings.png" />
 	  <None Remove="Images\verkoop.png" />
 	  <None Remove="Images\x5mcomp.jpg" />
 	  <None Remove="Images\yellowstar.png" />
@@ -70,7 +71,7 @@
 	  <MauiImage Include="Images\emptyprofile.png" />
 	  <MauiImage Include="Images\favoriet.png" />
 	  <MauiImage Include="Images\m2.jpg" />
-	  <MauiIcon Include="Images\m3comp.jpg" />
+	  <MauiImage Include="Images\m3comp.jpg" />
 	  <MauiImage Include="Images\m3e90.jpg" />
 	  <MauiImage Include="Images\m4comp.jpg" />
 	  <MauiImage Include="Images\m4f80.jpg" />
@@ -79,6 +80,7 @@
 	  <MauiImage Include="Images\main.jpg" />
 	  <MauiImage Include="Images\mcars.jpg" />
 	  <MauiImage Include="Images\search.png" />
+	  <MauiImage Include="Images\settings.png" />
 	  <MauiImage Include="Images\yellowstar.png" />
 	  <MauiImage Include="Images\verkoop.png" />
 	  <MauiImage Include="Images\x5mcomp.jpg" />
@@ -117,6 +119,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Register.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Settings.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\VerkoopPage.xaml">
