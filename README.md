@@ -39,6 +39,9 @@ Tweedezit uitwerking
 * **04/08/2024:** Interface en repository toegevoegd.
 * **05/08/2024:** Veranderingen in de favorietenviewmodel en de favoriet pagina.
 * **10/08/2024:** RegisterViewModel en LoginViewModel Toegevoegd.
+* **14/08/2024:** api/SettingsController en settingspagina is toegevoegd.
+
+
 
 
 
