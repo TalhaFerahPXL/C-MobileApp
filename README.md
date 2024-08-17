@@ -49,20 +49,38 @@ Tweedezit uitwerking
   
 
 # Optioneel: Screenshots
-Aanmelden Of Registreren Opties Pagina
-<p align="center"><img src="AppScreenshots/2.png" width="300"></p>
+Splashscreen
+<p align="center"><img src="Screenshots/Schermafbeelding 2024-08-17 152400.png" width="300"></p>
 
-Home Koop Pagina
-<p align="center"><img src="AppScreenshots/3.png" width="300"></p>
+Aanmelden pagina
+<p align="center"><img src="Screenshots/Schermafbeelding 2024-08-17 152454.png" width="300"></p>
+
+Registratie pagina
+<p align="center"><img src="Screenshots/Schermafbeelding 2024-08-17 230706.png" width="300"></p>
+
+Registratie pagina
+<p align="center"><img src="Screenshots/Schermafbeelding 2024-08-17 230746.png" width="300"></p>
+
+Home Pagina
+<p align="center"><img src="Screenshots/Schermafbeelding 2024-08-17 230822.png" width="300"></p>
+
+Filters
+<p align="center"><img src="Screenshots/Schermafbeelding 2024-08-17 230838.png" width="300"></p>
 
 Auto Details Pagina
-<p align="center"><img src="AppScreenshots/1.png" width="300"></p>
+<p align="center"><img src="Screenshots/Schermafbeelding 2024-08-17 230857.png" width="300"></p>
+
+Navigation
+<p align="center"><img src="Screenshots/Schermafbeelding 2024-08-17 230915.png" width="300"></p>
+
+Verkoop pagina
+<p align="center"><img src="Screenshots/Schermafbeelding 2024-08-17 230932.png" width="300"></p>
 
 Favorieten Auto's Pagina
-<p align="center"><img src="AppScreenshots/4.png" width="300"></p>
+<p align="center"><img src="Screenshots/Schermafbeelding 2024-08-17 230953.png" width="300"></p>
 
-Verkopen Pagina
-<p align="center"><img src="AppScreenshots/5.png" width="300"></p>
+Settings Pagina
+<p align="center"><img src="Screenshots/Untitled design (13).png" width="300"></p>
 
 
 
