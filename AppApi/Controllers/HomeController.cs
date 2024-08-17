@@ -128,21 +128,31 @@ namespace AppApi.Controllers
                     {
                         await connection.OpenAsync();
 
-                        string query = "DELETE FROM Autos WHERE AutoId = @AutoId";
+                        SqlTransaction transaction = connection.BeginTransaction();
 
-                        using (SqlCommand command = new SqlCommand(query, connection))
+                        string deleteFavoritesQuery = "DELETE FROM UserFavorites WHERE AutoId = @AutoId";
+                        using (SqlCommand commandFavorites = new SqlCommand(deleteFavoritesQuery, connection, transaction))
                         {
-                            command.Parameters.AddWithValue("@AutoId", id);
+                            commandFavorites.Parameters.AddWithValue("@AutoId", id);
+                            await commandFavorites.ExecuteNonQueryAsync();
+                        }
 
-                            int rowsAffected = await command.ExecuteNonQueryAsync();
+                        string deleteCarQuery = "DELETE FROM Autos WHERE AutoId = @AutoId";
+                        using (SqlCommand commandAuto = new SqlCommand(deleteCarQuery, connection, transaction))
+                        {
+                            commandAuto.Parameters.AddWithValue("@AutoId", id);
+                            int rowsAffected = await commandAuto.ExecuteNonQueryAsync();
 
+                            
                             if (rowsAffected > 0)
                             {
-                                return NoContent(); 
+                                transaction.Commit();
+                                return NoContent();
                             }
                             else
                             {
-                                return NotFound(); 
+                                transaction.Rollback();
+                                return NotFound();
                             }
                         }
                     }
@@ -152,6 +162,7 @@ namespace AppApi.Controllers
                     return StatusCode(500, "An error occurred: " + ex.Message);
                 }
             }
+
 
 
         }

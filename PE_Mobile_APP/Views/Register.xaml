@@ -27,7 +27,6 @@
         <Entry Placeholder="Password" IsPassword="True" Margin="20" Text="{Binding Password}"  TextColor="WhiteSmoke"/>
         <Label Text="testt" FontFamily="sans-serif" FontSize="18" TextColor="WhiteSmoke" IsVisible="false"></Label>
         <Button Command="{Binding RegisterCommand}" Text="Registreren" BackgroundColor="#C2D3ED" FontSize="15" TextColor="White" CornerRadius="5" Margin="20"/>
-        <Button Command="{Binding TestCommand}" Text="Test Command" />
     </StackLayout>
 
 </ContentPage>

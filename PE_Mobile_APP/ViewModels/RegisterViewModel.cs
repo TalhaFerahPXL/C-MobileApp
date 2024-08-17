@@ -46,11 +46,13 @@ namespace PE_Mobile_APP.ViewModels
 
                 if (response.IsSuccessStatusCode)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Success", "Registration successful!", "OK");
+                    await Application.Current.MainPage.DisplayAlert("Success", "Registratie succesvol!", "OK");
+                    await Application.Current.MainPage.Navigation.PushAsync(new Login(registrationData.email));
+
                 }
                 else
                 {
-                    await Application.Current.MainPage.DisplayAlert("Error", "Registration failed.", "OK");
+                    await Application.Current.MainPage.DisplayAlert("Error", "Registration mislukt.", "OK");
                 }
             }
             catch (Exception ex)
@@ -61,10 +63,6 @@ namespace PE_Mobile_APP.ViewModels
 
 
 
-        [RelayCommand]
-        public void Test()
-        {
-            Console.WriteLine("Command executed");
-        }
+       
     }
 }

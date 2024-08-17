@@ -15,4 +15,12 @@ public partial class Login : ContentPage
         BindingContext = ViewModel;
     }
 
+    public Login(string userEmail)
+    {
+        InitializeComponent();
+        ViewModel = new LoginViewModel();
+        BindingContext = ViewModel;
+        email.Text = userEmail;
+    }
+
 }
