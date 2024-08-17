@@ -3,7 +3,7 @@ Naam en email: **Ferah Talha + Talha.ferah@student.pxl.be**
 
 Titel applicatie: **My Bmw App**
 
-*Deze C# Mobile-applicatie voor autohandel biedt een gebruiksvriendelijk platform waar gebruikers moeiteloos auto's kunnen kopen, verkopen en favorieten kunnen markeren. De app heeft een uitgebreide database met gedetailleerde specificaties en prijsinformatie van verschillende voertuigen. Gebruikers kunnen hun auto's gedetailleerd presenteren met nauwkeurige informatie, waardoor potentiële kopers weloverwogen beslissingen kunnen nemen. Het platform ondersteunt soepele interacties tussen kopers en verkopers, en biedt een intuïtieve gebruikerservaring om gemakkelijk door beschikbare aanbiedingen te bladeren en transacties uit te voeren.*
+*Deze C# Mobile-applicatie voor autohandel biedt een gebruiksvriendelijk platform waar gebruikers moeiteloos auto's kunnen kopen, verkopen en favorieten kunnen markeren. De app heeft een uitgebreide database met gedetailleerde specificaties en prijsinformatie van verschillende voertuigen. Gebruikers kunnen hun auto's gedetailleerd presenteren met nauwkeurige informatie waardoor potentiële kopers weloverwogen beslissingen kunnen nemen. Het platform ondersteunt soepele interacties tussen kopers en verkopers en biedt een intuïtieve gebruikerservaring om gemakkelijk door beschikbare aanbiedingen te bladeren en transacties uit te voeren.*
 
 Opsomming belangrijkste kenmerken en onderdelen/features van de applicatie: 
 * Auto Kopen en Verkopen: Gebruikers kunnen moeiteloos auto's zowel kopen als verkopen via het platform.
@@ -40,11 +40,6 @@ Tweedezit uitwerking
 * **05/08/2024:** Veranderingen in de favorietenviewmodel en de favoriet pagina.
 * **10/08/2024:** RegisterViewModel en LoginViewModel Toegevoegd.
 * **14/08/2024:** api/SettingsController en settingspagina is toegevoegd.
-
-
-
-
-
 
   
 
@@ -85,7 +80,7 @@ Settings Pagina
 
 
 # Videolink
-https://www.youtube.com/watch?v=RJm0XDQth7A&ab_channel=T
+https://www.youtube.com/watch?v=uBrYKVFFWQ0
 
 # Bronnen
 
@@ -119,8 +114,8 @@ https://www.youtube.com/watch?v=RJm0XDQth7A&ab_channel=T
   
 
 # Future work
-* Als er meer tijd beschikbaar was, zou ik de mogelijkheid om meerdere afbeeldingen toe te voegen aan autoaanbiedingen verbeteren. Dit zou ik aanpakken door de gegevensstructuur aan te passen om meerdere afbeeldingen per auto toe te staan, de gebruikersinterface bij te werken voor het uploaden en bekijken van meerdere afbeeldingen, en de opslag en laadtijd van deze afbeeldingen te optimaliseren binnen de app. Dit zou de gebruikerservaring verbeteren door potentiële kopers een uitgebreider beeld van het voertuig te geven.
+* Als er meer tijd beschikbaar was zou ik de mogelijkheid om meerdere afbeeldingen toe te voegen aan autoaanbiedingen verbeteren. Dit zou ik aanpakken door de gegevensstructuur aan te passen om meerdere afbeeldingen per auto toe te staan de gebruikersinterface bij te werken voor het uploaden en bekijken van meerdere afbeeldingen, en de opslag en laadtijd van deze afbeeldingen te optimaliseren binnen de app. Dit zou de gebruikerservaring verbeteren door potentiële kopers een uitgebreider beeld van het voertuig te geven.
 
-* Als er extra tijd was, zou ik avatar- en profielinstellingen toevoegen aan de app. Dit zou ik aanpakken door een sectie te creëren waar gebruikers hun profiel kunnen aanpassen, inclusief het uploaden van een profielfoto (avatar), het wijzigen van gebruikersgegevens en het instellen van voorkeuren. Ook zou ik de backend updaten om profielinformatie en avatars op te slaan en de gebruikersinterface bijwerken zodat gebruikers gemakkelijk hun profielinformatie kunnen bewerken en hun avatar kunnen tonen.
+* Als er extra tijd was, zou ik avatar- en profielinstellingen toevoegen aan de app. Dit zou ik aanpakken door een sectie te creëren waar gebruikers hun profiel kunnen aanpassen inclusief het uploaden van een profielfoto (avatar) het wijzigen van gebruikersgegevens en het instellen van voorkeuren. Ook zou ik de backend updaten om profielinformatie en avatars op te slaan en de gebruikersinterface bijwerken zodat gebruikers gemakkelijk hun profielinformatie kunnen bewerken en hun avatar kunnen tonen.
 
-* Als ik de mogelijkheid had om meer tijd te besteden aan de app, zou ik een uitgebreidere backend-implementatie toevoegen voor permanente gegevensopslag. Dit zou inhouden dat alle gebruikersgegevens, inclusief profielinstellingen, favoriete auto's en aanbiedingen, continu worden opgeslagen in de backend, zelfs wanneer de gebruiker de applicatie afsluit of de sessie beëindigt. Hierdoor zou de app een meer consistente en persistente gebruikerservaring bieden, waarbij gebruikers hun voorkeuren en gegevens behouden, ongeacht wanneer ze de app openen of sluiten. 
+* Als toekomstig werk zou het toevoegen van SignalR voor real-time communicatie een goede verbetering zijn om chatfunctionaliteit mogelijk te maken.
