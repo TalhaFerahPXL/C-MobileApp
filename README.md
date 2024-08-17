@@ -77,7 +77,7 @@ https://www.youtube.com/watch?v=RJm0XDQth7A&ab_channel=T
 *Gebruik van File Picker om foto's toe te voegen*
 * *https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/storage/file-picker?view=net-maui-8.0&tabs=android*
 
-* Gebruik van Azure functies en blob opslag
+* Gebruik van Azure functies en blob opslag*
 * *https://learn.microsoft.com/en-us/azure/storage/blobs/blob-upload-function-trigger?tabs=azure-portal*
 
 *Gebruik van Picker om filter waardes weer te geven*
@@ -89,13 +89,13 @@ https://www.youtube.com/watch?v=RJm0XDQth7A&ab_channel=T
 *Voor het aanmaken van een converter*
 * *https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/data-binding/converters?view=net-maui-8.0*
 
-* Gebruik van behavoir<entry>
+* Gebruik van behavoir<entry>*
 *  *https://learn.microsoft.com/en-us/previous-versions/xamarin/xamarin-forms/app-fundamentals/behaviors/creating*
 
-*  Viewmodel architectuur in mauiapp
+*  Viewmodel architectuur in mauiapp*
 *  *https://blackboard.pxl.be/ultra/courses/_49036_1/outline/file/_1705232_1*
 
-*  Singleton design pattern voor de viewmodel
+*  Singleton design pattern voor de viewmodel*
 *  *https://www.tutorialsteacher.com/csharp/singleton*
 
   
